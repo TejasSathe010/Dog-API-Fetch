@@ -17,9 +17,11 @@ function createBreedList(breedList) {
     });
 }
 
-list.addEventListener('change', (event) => {
+list.addEventListener('change', async (event) => {
     let breed = event.target.value;
     if(breed != "Choose a Dog Breed") {
-        console.log(breed);
+        const response = await fetch(`https://dog.ceo/api/breed/${breed}/images`);
+        const data = await response.json();
+        console.log(data);
     }
 })
