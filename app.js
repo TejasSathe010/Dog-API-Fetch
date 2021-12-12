@@ -22,6 +22,17 @@ list.addEventListener('change', async (event) => {
     if(breed != "Choose a Dog Breed") {
         const response = await fetch(`https://dog.ceo/api/breed/${breed}/images`);
         const data = await response.json();
-        console.log(data);
+        // console.log(data);
+        await createSlideShow(data.message);
     }
-})
+});
+
+let slideShow = document.querySelector('.slideshow');
+
+function createSlideShow(images) {
+    let slide = document.createElement('div');
+    slide.classList.add('slide');
+    slide.style.backgroundImage = `Url('${images[0]}')`;
+    slideShow.append(slide);
+    console.log(slide);
+}
