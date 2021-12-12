@@ -1,20 +1,36 @@
-body {
-    margin: 0px;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.app {
+html, body {
+    height: 100%;
+  }
+  
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  .app {
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.header {
-    flex: 1;
-}
-
-.slideshow {
+  }
+  
+  .header {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .header h1 {
+    margin: 0 0 10px 0;
+  }
+  
+  .header select {
+    font-size: 1rem;
+  }
+  
+  .slideshow {
     flex: 1;
     background-color: #333;
-}
+    position: relative;
+    overflow: hidden;
+  }
+  
